@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "358566937159",
+    "firebase_url": "https://ux-design-618cb.firebaseio.com",
+    "project_id": "ux-design-618cb",
+    "storage_bucket": "ux-design-618cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358566937159:android:6ea073f76b48400245a762",
+        "android_client_info": {
+          "package_name": "com.example.uxdesign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358566937159-lq1ejo3ba3tcccg4l96eui2foqfsvkps.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uxdesign",
+            "certificate_hash": "334edbd8158b3946eeb33961b6f652c74c968440"
+          }
+        },
+        {
+          "client_id": "358566937159-g31sqrsdhgkm263bi625dvisvorfgg9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp0dqZdyKTUL6HpD6ub21XrSGEdXghXsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358566937159-g31sqrsdhgkm263bi625dvisvorfgg9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
