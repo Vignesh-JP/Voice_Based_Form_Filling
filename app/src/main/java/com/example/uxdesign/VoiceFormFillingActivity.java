@@ -70,6 +70,7 @@ public class VoiceFormFillingActivity extends AppCompatActivity {
         okbtn.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText( VoiceFormFillingActivity.this , "clicked" , Toast.LENGTH_SHORT ).show();
                 uploadToDatabase();
             }
         } );
@@ -120,6 +121,11 @@ public class VoiceFormFillingActivity extends AppCompatActivity {
                 dataet.getText().clear();
                 if(index!=arrayAdapter.getCount()){
                     a=arrayAdapter.getItem(index);
+                    if (a.contains( "*" )) {
+                        Toast.makeText( VoiceFormFillingActivity.this , "REQUIRED FIELD" , Toast.LENGTH_LONG ).show();
+                        Toast.makeText( VoiceFormFillingActivity.this , "please enter this field or else your form will not be validated" , Toast.LENGTH_SHORT ).show();
+
+                    }
                     fieldtv.setText( "ENTER YOUR "+a );
 
                     index++;}
