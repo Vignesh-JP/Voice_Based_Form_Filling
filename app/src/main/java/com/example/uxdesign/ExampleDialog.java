@@ -20,7 +20,7 @@ public class ExampleDialog extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate( R.layout.layout_dialog ,null);
 
-        builder.setView( view ).setTitle( "ADD FIELD" ).setNegativeButton( "CANCEL" , new DialogInterface.OnClickListener() {
+        builder.setView( view ).setTitle( "ADD FIELD" ).setNegativeButton( "CANCEL    " , new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog , int which) {
 
@@ -51,4 +51,5 @@ public class ExampleDialog extends DialogFragment {
         void applyTexts(String Field);
     }
 }
+
 
