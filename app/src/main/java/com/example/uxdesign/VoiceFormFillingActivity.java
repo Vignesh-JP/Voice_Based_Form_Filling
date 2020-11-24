@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -199,6 +201,7 @@ public class VoiceFormFillingActivity extends AppCompatActivity {
 
         if (requestCode == Recogniser_result && resultCode == RESULT_OK) {
             ArrayList<String> matches = data.getStringArrayListExtra( RecognizerIntent.EXTRA_RESULTS );
+            assert matches != null;
             b=matches.get( 0 );
             dataet.setText( b );
         }
@@ -210,6 +213,20 @@ public class VoiceFormFillingActivity extends AppCompatActivity {
         demoref.child(a).push().setValue(c);
         c="";
     }
+    private TextWatcher loginTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String usernameInput = dataet.getText().toString().trim();
+            okbtn.setEnabled(!usernameInput.isEmpty());
+
+        }
+        @Override
+        public void afterTextChanged(Editable s) {
+        }
+    };
 
 
 }
